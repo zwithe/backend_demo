@@ -2,7 +2,9 @@ const router = require('express').Router()
 const {
     getAllBread,
     getBreadById,
-    createBread
+    createBread,
+    updateBreadById,
+    deleteBreadById
 } = require('../controllers/bread')
 
 // GET / get all breads
@@ -15,7 +17,9 @@ router.get('/:id', getBreadById)
 router.post('/', createBread)
 
 // PUT /:id update bread by id
+router.put('/:id', updateBreadById)
 
 // DELETE /:id delete bread by id
+router.delete('/:id', deleteBreadById)
 
 module.exports = router
